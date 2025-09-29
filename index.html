@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>YouTube Downloader</title>
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: #f4f6fb; margin: 0; }
+
+    .container { max-width: 480px; margin: 48px auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 16px #0001; padding: 32px; }
+    
+    h2 { margin-top: 0; font-weight: 600; color: #2d3748; }
+    label { display: block; margin: 16px 0 4px; font-weight: 500; }
+    input[type="text"], input[type="url"] { width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 1rem; }
+    select { width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 1rem; }
+    button, input[type="submit"] { background: #2563eb; color: #fff; border: none; border-radius: 6px; padding: 12px 24px; font-size: 1rem; font-weight: 500; cursor: pointer; margin-top: 20px; }
+    button:hover, input[type="submit"]:hover { background: #1e40af; }
+    .note { color: #64748b; font-size: 0.95em; margin-top: 8px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>🎬 YouTube Downloader</h2>
+    <form action="/download" method="post">
+      <label for="url">Video URL</label>
+      <input type="url" name="url" id="url" placeholder="https://www.youtube.com/watch?v=..." required>
+      <label for="format_id">Format ID (optional)</label>
+      <input type="text" name="format_id" id="format_id" placeholder="e.g. 230">
+      <input type="submit" value="Download">
+      <div class="note">Downloads a single-file (progressive) stream. If you see format options, select one for best results.</div>
+    </form>
+  </div>
+</body>
+</html>
